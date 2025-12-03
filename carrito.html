@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Carrito - Tienda Electrónica</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="container">
+    <div class="brand">
+      <div class="logo">TE</div>
+      <div>
+        <div style="font-size:14px; opacity:0.8">Tienda Electrónica</div>
+      </div>
+    </div>
+    <div class="links">
+      <a href="index.html">Inicio</a>
+      <a href="carrito.html">Carrito</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Carrito de Compras</h2>
+    <section style="display:flex; gap:18px; flex-direction:column; max-width:800px; margin-top:12px;">
+      <ul id="lista-carrito"></ul>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+        <strong>Total: </strong>
+        <div id="total">$0</div>
+      </div>
+
+      <div style="display:flex; gap:10px; margin-top:12px;">
+        <button class="btn" id="checkoutBtnPage">Pagar</button>
+        <button class="btn secondary" id="vaciarBtnPage">Vaciar carrito</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tienda Electrónica - Inicio</title>
+  <meta name="description" content="Tienda de electrónica - proyecto final. Listado de productos, carrito y contacto." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="container">
+    <div class="brand">
+      <div class="logo">TE</div>
+      <div>
+        <div style="font-size:14px; opacity:0.8">Tienda Electrónica</div>
+        <div style="font-size:12px; color:var(--muted)">Proyecto final - Tema oscuro</div>
+      </div>
+    </div>
+    <div class="links">
+      <a href="index.html">Inicio</a>
+      <a href="carrito.html">Carrito</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Tienda de Electrónica</h1>
+        <p>Productos destacados. Agregá al carrito y probá la funcionalidad dinámica.</p>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center">
+        <a class="btn" href="carrito.html">Ir al Carrito</a>
+        <div id="lista-productos"></div>
+
+        <script src="data.js"></script>
+        <script src="script.js"></script>
+
+      </div>
+    </section>
+
+    <section class="layout">
+      <div>
+        <h2 style="margin:0 0 8px 0">Productos</h2>
+        <div id="productos" aria-live="polite"></div>
+      </div>
+
+      <aside class="aside" aria-label="Resumen del carrito">
+        <h3 style="margin-top:0">Resumen</h3>
+        <ul id="lista-carrito"></ul>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px">
+          <strong>Total:</strong>
+          <div id="total">$0</div>
+        </div>
+        <div style="margin-top:12px; display:flex; gap:8px">
+          <button class="btn" id="checkoutBtn">Realizar compra</button>
+          <button class="btn secondary" id="vaciarBtn">Vaciar</button>
+        </div>
+      </aside>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>Desarrollado como proyecto final • Buenas prácticas: HTML semántico, accesibilidad y responsive.</small>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

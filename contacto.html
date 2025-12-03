@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacto - Tienda Electrónica</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="container">
+    <div class="brand">
+      <div class="logo">TE</div>
+      <div>
+        <div style="font-size:14px; opacity:0.8">Tienda Electrónica</div>
+      </div>
+    </div>
+    <div class="links">
+      <a href="index.html">Inicio</a>
+      <a href="carrito.html">Carrito</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Contacto</h2>
+    <p class="small">Completá el formulario y te respondemos (simulado).</p>
+
+    <form id="contactForm" style="max-width:560px; margin-top:12px;">
+      <label for="name">Nombre</label>
+      <input id="name" name="name" type="text" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+
+      <div style="display:flex; gap:8px; margin-top:8px;">
+        <button class="btn" type="submit">Enviar</button>
+        <button class="btn secondary" type="reset">Limpiar</button>
+      </div>
+    </form>
+
+    <div id="contactResult" style="margin-top:12px;"></div>
+  </main>
+
+  <script>
+    // maneja el form localmente (sin servidor)
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      document.getElementById('contactResult').innerHTML = '<div style="padding:12px;border-radius:10px;background:rgba(255,255,255,0.03)">Gracias '+name+', tu mensaje fue enviado (simulado).</div>';
+      this.reset();
+    });
+  </script>
+</body>
+</html>
